@@ -1,0 +1,7 @@
+{
+  "name": "RealTrust - Real Estate & Consultation",
+  "description": "A comprehensive real estate landing page and admin panel with project management, client testimonials, and lead tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

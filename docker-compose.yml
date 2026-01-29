@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: realtrust-frontend:latest
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: realtrust-backend:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/database.db:/usr/src/app/database.db
+    environment:
+      - NODE_ENV=production
